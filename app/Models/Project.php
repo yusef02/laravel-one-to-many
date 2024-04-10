@@ -17,4 +17,9 @@ class Project extends Model
         'last_update',
         'author'
     ];
+
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
+    }
 }
