@@ -22,7 +22,13 @@ class ProjectSeeder extends Seeder
 
         foreach ($projects as $project) {
             $new_project = new Project();
-            $new_project->fill($project);
+            // $new_project->fill($project);
+            $new_project->title = $project['title'];
+            $new_project->description = $project['description'];
+            $new_project->repository = $project['repository'];
+            $new_project->date_create = $project['date_create'];
+            $new_project->last_update = $project['last_update'];
+            $new_project->author = $project['author'];
             $new_project->type_id = $faker->randomElement($types);
             $new_project->save();
         }
