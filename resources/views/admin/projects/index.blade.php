@@ -12,6 +12,7 @@
       <tr>
         <th>Title</th>
         <th>Repository</th>
+        <th>Type</th>
         <th>Create date</th>
         <th>Last update</th>
         <th>Author</th>
@@ -23,6 +24,7 @@
       <tr>
         <td>{{$project['title']}}</td>
         <td>{{$project['repository']}}</td>
+        <td>{{$project->type->label}}</td>
         <td>{{$project['date_create']}}</td>
         <td>{{$project['last_update']}}</td>
         <td>{{$project['author']}}</td>

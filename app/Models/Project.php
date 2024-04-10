@@ -15,8 +15,10 @@ class Project extends Model
         'repository',
         'date_create',
         'last_update',
-        'author'
+        'author',
+        'type_id',
     ];
+    protected $guarded = ['type_id'];
 
     public function type()
     {

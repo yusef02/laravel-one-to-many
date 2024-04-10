@@ -17,6 +17,14 @@
       <input type="text" class="form-control " id="repository" name="repository" required>
     </div>
     <div class="col-4">
+      <label for="type_id" class="form-label">Type*</label>
+      <select type="text" class="form-select " id="type_id" name="type_id" required>
+        @foreach($types as $type)
+        <option value="{{$type->id}}">{{$type->type}}</option>
+        @endforeach
+      </select>
+    </div>
+    <div class="col-4">
       <label for="author" class="form-label">Author*</label>
       <input type="text" class="form-control " id="author" name="author" required>
     </div>
