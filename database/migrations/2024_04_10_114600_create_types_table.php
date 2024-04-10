@@ -15,6 +15,23 @@ return new class extends Migration
     {
         Schema::create('types', function (Blueprint $table) {
             $table->id();
+            $table->enum('type', [
+                'blog',
+                'e-commerce',
+                'community',
+                'forum',
+                'coupon',
+                'crowdfunding',
+                'event',
+                'info',
+                'landing page',
+                'news',
+                'one page',
+                'personal',
+                'portfolio',
+                'social network',
+                'streaming'
+            ]);
             $table->timestamps();
         });
     }
